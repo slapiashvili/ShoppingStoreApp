@@ -8,6 +8,7 @@
 import SwiftUI
 
 class GroceryViewModel: ObservableObject {
+    
     @Published var products: [ProductViewModel] = []
     @Published var showAlert: Bool = false
     @Published var cart: [String: Int] = [:]
@@ -38,7 +39,7 @@ class GroceryViewModel: ObservableObject {
                 showAlert = true
             }
         } else {
-            // Handle the case where the product name is not found in the cart
+            //TODO: add logic
         }
     }
 
@@ -72,7 +73,7 @@ class GroceryViewModel: ObservableObject {
             }
             return total
         }
-
+//TODO: fix these
 //    func applyDiscount(for productIndex: Int) {
 //            if !discountedProductIndices.contains(productIndex) {
 //                products[productIndex].price *= 0.8
