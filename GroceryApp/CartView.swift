@@ -9,14 +9,14 @@ import SwiftUI
 
 struct CartView: View {
     @ObservedObject var viewModel: GroceryViewModel
-    
+
     var body: some View {
         VStack {
             Text("Cart")
                 .font(.title)
                 .bold()
                 .foregroundColor(Color("samiNabijiGreen"))
-            
+
             List {
                 ForEach(viewModel.cart.keys.sorted(by: { $0 < $1 }), id: \.self) { productName in
                     if let quantity = viewModel.cart[productName], let product = viewModel.products.first(where: { $0.name == productName }) {
@@ -24,18 +24,18 @@ struct CartView: View {
                     }
                 }
             }
-            
+
             HStack {
                 Button(action: {
-                    //TODO: add the logic in the future if we have more views
+                    // TODO: Add logic for checkout
                 }) {
                     Text("Checkout")
                         .font(.headline)
                         .foregroundColor(Color("samiNabijiGreen"))
                 }
-                
+
                 Spacer()
-                
+
                 Text("Total: $\(String(format: "%.2f", viewModel.totalCartPrice()))")
                     .font(.headline)
             }

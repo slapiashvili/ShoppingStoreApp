@@ -8,24 +8,22 @@
 import SwiftUI
 
 
-
-
 struct ProductView: View {
     @ObservedObject var viewModel: GroceryViewModel
     let product: ProductViewModel
-    
+
     var body: some View {
         VStack {
             Text("$\(String(format: "%.2f", product.price))")
                 .font(.headline)
                 .foregroundColor(.coolGreen)
                 .bold()
-            
+
             Image(product.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 80)
-            
+
             HStack {
                 Button(action: {
                     viewModel.removeFromCart(productName: product.name)
@@ -35,12 +33,12 @@ struct ProductView: View {
                         .foregroundColor(.samiNabijiCream)
                 }
                 .padding()
-                
+
                 Text("\(viewModel.cartQuantity(for: product.name))")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                
+
                 Button(action: {
                     viewModel.addToCart(product: product)
                 }) {

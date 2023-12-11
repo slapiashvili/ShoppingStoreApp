@@ -8,10 +8,10 @@
 import SwiftUI
 
 
+
 struct ContentView: View {
     @ObservedObject var viewModel = GroceryViewModel()
-    
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -31,7 +31,7 @@ struct ContentView: View {
                         .ignoresSafeArea(.all, edges: .top)
                         .foregroundColor(Color("almostGreen"))
                 )
-                
+
                 HStack {
                     VStack() {
                         VStack(alignment: .center, spacing: 2) {
@@ -42,21 +42,21 @@ struct ContentView: View {
                                 .bold()
                                 .foregroundColor(Color("coolGreen"))
                         }
-                        
+
                         Text("Find everything you need")
                             .font(.subheadline)
                     }
                     .padding()
-                    
+
                     Spacer()
-                    
+
                     Image("sami.nabiji.logo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 100)
                 }
                 .padding(.horizontal, 30)
-                
+
                 HStack {
                     Text("Try a pro discount")
                         .font(.headline)
@@ -64,9 +64,9 @@ struct ContentView: View {
                         .font(.headline)
                         .foregroundColor(.green)
                         .padding(.trailing, 5)
-                    
+
                     Button(action: {
-                        // TODO: add the action for the discount
+                        // TODO: Add action for the discount
                     }) {
                         Text("Show 20% off")
                             .font(.subheadline)
@@ -78,7 +78,7 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                
+
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                         ForEach(viewModel.products) { product in
@@ -88,23 +88,18 @@ struct ContentView: View {
                                         .stroke(Color.almostGreen, lineWidth: 1)
                                 )
                                 .onTapGesture {
-                                
-                                        viewModel.addToCart(product: product)
-                                    }
+                                    viewModel.addToCart(product: product)
                                 }
-
                         }
                     }
                     .padding(16)
                 }
-                .background(Color.samiNabijiCream)
+                .background(Color("samiNabijiCream"))
                 .navigationBarHidden(true)
-            
-                }
-
+            }
+        }
     }
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {
