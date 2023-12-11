@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class GroceryViewModel: ObservableObject {
+final class GroceryViewModel: ObservableObject {
     @Published var products: [ProductViewModel] = []
     @Published var cart: [String: Int] = [:]
 
