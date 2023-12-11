@@ -80,7 +80,7 @@ struct ContentView: View {
                 .padding()
 
                 ScrollView {
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 15) {
                         ForEach(viewModel.products) { product in
                             ProductView(viewModel: viewModel, product: product)
                                 .background(
@@ -94,7 +94,6 @@ struct ContentView: View {
                     }
                     .padding(16)
                 }
-                .background(Color("samiNabijiCream"))
                 .navigationBarHidden(true)
             }
         }

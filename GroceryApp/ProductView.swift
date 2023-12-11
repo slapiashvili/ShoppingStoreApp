@@ -11,7 +11,7 @@ import SwiftUI
 struct ProductView: View {
     @ObservedObject var viewModel: GroceryViewModel
     let product: ProductViewModel
-
+    
     var body: some View {
         VStack {
             Text("$\(String(format: "%.2f", product.price))")
@@ -22,7 +22,7 @@ struct ProductView: View {
             Image(product.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 80)
+                .frame(height: 90)
 
             HStack {
                 Button(action: {
@@ -48,10 +48,10 @@ struct ProductView: View {
                 }
                 .padding()
             }
-            .background(Color("coolGreen").opacity(0.7))
+            .background(Color("almostGreen"))
             .cornerRadius(10)
-            .padding(5)
+            .padding(1)
         }
-        .padding()
+        .padding(5)
     }
 }

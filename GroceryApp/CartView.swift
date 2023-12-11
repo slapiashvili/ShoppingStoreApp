@@ -74,6 +74,7 @@ struct CartItemView: View {
                 Image(systemName: "trash")
                     .foregroundColor(.red)
             }
+            
         }
     }
 }
