@@ -48,7 +48,7 @@ struct CartView: View {
 #warning("თუ რამოდენიმე ვიუ გაქვს სხვადასხვა ფაილში გაიტანე, თუნდაც თუ ერთს კომპონენტად იყენებ ცალკე კომპონენტად გაიტანე")
 struct CartItemView: View {
     #warning("private ")
-    let product: ProductViewModel
+    let product: ProductModel
     let quantity: Int
     @ObservedObject var viewModel: GroceryViewModel
 

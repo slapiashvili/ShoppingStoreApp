@@ -8,23 +8,23 @@
 import SwiftUI
 
 final class GroceryViewModel: ObservableObject {
-    @Published var products: [ProductViewModel] = []
+    @Published var products: [ProductModel] = []
     @Published var cart: [String: Int] = [:]
 
     init() {
         products = [
-            ProductViewModel(id: 0, name: "Orange", quantityInStock: 10, price: 2.5, image: "orange.image"),
-            ProductViewModel(id: 1, name: "Apple", quantityInStock: 15, price: 1.5, image: "apple.image"),
-            ProductViewModel(id: 2, name: "Banana", quantityInStock: 20, price: 1.0, image: "banana.image"),
-            ProductViewModel(id: 3, name: "Grapes", quantityInStock: 12, price: 3.0, image: "grapes.image"),
-            ProductViewModel(id: 4, name: "Pomegranate", quantityInStock: 8, price: 4.0, image: "pomegranate.image"),
-            ProductViewModel(id: 5, name: "Mango", quantityInStock: 18, price: 2.8, image: "mango.image"),
-            ProductViewModel(id: 6, name: "Strawberry", quantityInStock: 25, price: 2.2, image: "strawberry.image"),
-            ProductViewModel(id: 7, name: "Pineapple", quantityInStock: 10, price: 3.5, image: "pineapple.image")
+            ProductModel(id: 0, name: "Orange", quantityInStock: 10, price: 2.5, image: "orange.image"),
+            ProductModel(id: 1, name: "Apple", quantityInStock: 15, price: 1.5, image: "apple.image"),
+            ProductModel(id: 2, name: "Banana", quantityInStock: 20, price: 1.0, image: "banana.image"),
+            ProductModel(id: 3, name: "Grapes", quantityInStock: 12, price: 3.0, image: "grapes.image"),
+            ProductModel(id: 4, name: "Pomegranate", quantityInStock: 8, price: 4.0, image: "pomegranate.image"),
+            ProductModel(id: 5, name: "Mango", quantityInStock: 18, price: 2.8, image: "mango.image"),
+            ProductModel(id: 6, name: "Strawberry", quantityInStock: 25, price: 2.2, image: "strawberry.image"),
+            ProductModel(id: 7, name: "Pineapple", quantityInStock: 10, price: 3.5, image: "pineapple.image")
         ]
     }
 
-    func addToCart(product: ProductViewModel) {
+    func addToCart(product: ProductModel) {
         let productName = product.name
 
         if let quantity = cart[productName] {
@@ -61,13 +61,7 @@ final class GroceryViewModel: ObservableObject {
     }
 }
 
-struct ProductModel: Identifiable {
-    let id: Int
-    let name: String
-    let quantityInStock: Int
-    var price: Double
-    let image: String
-}
+
 
 
 
