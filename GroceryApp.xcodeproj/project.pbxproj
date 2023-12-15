@@ -18,6 +18,7 @@
 		3C3651B62B26BB0F00D8A5E0 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3651B52B26BB0F00D8A5E0 /* CartView.swift */; };
 		3C616E842B26C50400F540C0 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C616E832B26C50400F540C0 /* ProductView.swift */; };
 		3CFF0E612B2D180400BC31BD /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF0E602B2D180400BC31BD /* ProductModel.swift */; };
+		3CFF0E652B2D190D00BC31BD /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF0E642B2D190D00BC31BD /* CartItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3C3651B52B26BB0F00D8A5E0 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		3C616E832B26C50400F540C0 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		3CFF0E602B2D180400BC31BD /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		3CFF0E642B2D190D00BC31BD /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				3C36518B2B26A9EE00D8A5E0 /* ContentView.swift */,
 				3C3651B52B26BB0F00D8A5E0 /* CartView.swift */,
 				3C616E832B26C50400F540C0 /* ProductView.swift */,
+				3CFF0E642B2D190D00BC31BD /* CartItemView.swift */,
 				3CFF0E632B2D182300BC31BD /* ViewModel */,
 				3CFF0E622B2D181800BC31BD /* Model */,
 				3C36518D2B26A9EF00D8A5E0 /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 				3CFF0E612B2D180400BC31BD /* ProductModel.swift in Sources */,
 				3C36518C2B26A9EE00D8A5E0 /* ContentView.swift in Sources */,
 				3C3651B42B26AA6200D8A5E0 /* ViewModel.swift in Sources */,
+				3CFF0E652B2D190D00BC31BD /* CartItemView.swift in Sources */,
 				3C3651B62B26BB0F00D8A5E0 /* CartView.swift in Sources */,
 				3C36518A2B26A9EE00D8A5E0 /* GroceryAppApp.swift in Sources */,
 			);
