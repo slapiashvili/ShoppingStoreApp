@@ -61,12 +61,13 @@ final class GroceryViewModel: ObservableObject {
     }
 }
 
-struct ProductViewModel: Identifiable {
+struct ProductModel: Identifiable {
     let id: Int
     let name: String
     let quantityInStock: Int
     var price: Double
     let image: String
 }
+
 
 

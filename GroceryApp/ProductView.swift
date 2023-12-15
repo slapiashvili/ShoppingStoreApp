@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+#warning("აქაც ყველაფერი იგივე რაც კონტენტში დაგიწერე")
 struct ProductView: View {
     @ObservedObject var viewModel: GroceryViewModel
     let product: ProductViewModel

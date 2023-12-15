@@ -8,10 +8,11 @@
 import SwiftUI
 
 
-
+#warning("MARK-ები აქაც დაწერე ჩვეულებრივ როგორც UIKit-ში წერ")
 struct ContentView: View {
     @ObservedObject var viewModel = GroceryViewModel()
 
+    #warning("body-ში გაქვს ძალიან ბევრი view ჩალაგებული, შესაბამისად რთული წასაკითხია, აჯობებს რომ body პატარ პატარა view-ებად დაყო ცვლადების სახით მაგ: private var tryDiscount: some View { და აქ გაიტანო შენი HStack-ი და იმ ადგილას უბრალოდ ცვლადის სახელს დაწერ, ხოლო თუ შენს view-ს ჭირდება რაიმე ცვლადი დასახატად მაშინ შეგიძლია გააკეთო ფუნქცია იქ გადააწოდო და ფუნქცია დააბრუნებს some View-ს")
     var body: some View {
         NavigationView {
             VStack {
