@@ -8,6 +8,9 @@
 import SwiftUI
 
 final class GroceryViewModel: ObservableObject {
+    
+    // MARK: -properties
+
     @Published var products: [ProductModel] = []
     @Published var cart: [String: Int] = [:]
 
@@ -23,7 +26,8 @@ final class GroceryViewModel: ObservableObject {
             ProductModel(id: 7, name: "Pineapple", quantityInStock: 10, price: 3.5, image: "pineapple.image")
         ]
     }
-
+    
+    // MARK: -methods
     func addToCart(product: ProductModel) {
         let productName = product.name
 
