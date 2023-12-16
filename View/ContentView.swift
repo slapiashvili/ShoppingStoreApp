@@ -11,6 +11,7 @@ struct ContentView: View {
     
     // MARK: properties
     @ObservedObject var viewModel = GroceryViewModel()
+    @State private var isDiscountApplied = false
 
     // MARK: - Header View
     private var headerView: some View {
@@ -62,28 +63,30 @@ struct ContentView: View {
 
     // MARK: - Discount View
     private var discountView: some View {
-        HStack {
-            Text("Try a pro discount")
-                .font(.headline)
-            Image(systemName: "arrow.right")
-                .font(.headline)
-                .foregroundColor(.green)
-                .padding(.trailing, 5)
-
-            Button(action: {
-                // TODO: Add action for the discount
-            }) {
-                Text("Show 20% off")
-                    .font(.subheadline)
-                    .bold()
+            HStack {
+                Text("Try a pro discount")
+                    .font(.headline)
+                Image(systemName: "arrow.right")
+                    .font(.headline)
                     .foregroundColor(.green)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
-                    .background(RoundedRectangle(cornerRadius: 10).stroke(Color.green, lineWidth: 2))
+                    .padding(.trailing, 5)
+
+                Button(action: {
+                    isDiscountApplied.toggle()
+                    // Apply or revert the discount
+                    viewModel.applyDiscount(isDiscountApplied)
+                }) {
+                    Text(isDiscountApplied ? "Revert Discount" : "Apply 20% off")
+                        .font(.subheadline)
+                        .bold()
+                        .foregroundColor(.green)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(RoundedRectangle(cornerRadius: 10).stroke(Color.green, lineWidth: 2))
+                }
             }
+            .padding()
         }
-        .padding()
-    }
 
     // MARK: - Product Grid View
     private var productGridView: some View {

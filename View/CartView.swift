@@ -35,7 +35,7 @@ struct CartView: View {
     private var checkoutView: some View {
         HStack {
             Button(action: {
-                // TODO: Add logic for checkout
+                // TODO: Add logic for checkout in the future if we continue this assignment to actually work
             }) {
                 Text("Checkout")
                     .font(.headline)

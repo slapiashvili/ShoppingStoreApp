@@ -15,7 +15,15 @@ struct ProductView: View {
 
     // MARK: - Price View
     private var priceView: some View {
-        Text("$\(String(format: "%.2f", product.price))")
+        let displayPrice: Double
+        
+        if let discountedPrice = product.discountedPrice {
+            displayPrice = discountedPrice
+        } else {
+            displayPrice = product.price
+        }
+        
+        return Text("$\(String(format: "%.2f", displayPrice))")
             .font(.headline)
             .foregroundColor(.coolGreen)
             .bold()
